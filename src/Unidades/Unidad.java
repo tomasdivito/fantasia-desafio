@@ -47,7 +47,7 @@ public abstract class Unidad {
 		return ataqueBase;
 	}
 	
-	public abstract void atacar(Unidad unidad);
+	public abstract boolean atacar(Unidad unidad);
 	public abstract void recibirAtaque(double ataque);
 	public abstract void descansar();
 }

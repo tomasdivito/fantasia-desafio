@@ -10,9 +10,9 @@ public class Pheach extends Unidad {
 	}
 
 	@Override
-	public void atacar(Unidad unidad) {
+	public boolean atacar(Unidad unidad) {
 		// TODO Auto-generated method stub
-		
+		return false;
 	}
 
 	@Override
