@@ -4,24 +4,31 @@ public abstract class Unidad {
 	private double x;
 	private double salud;
 	private double ataqueBase;
-	private double[] rango = new double[2];
+	private double rangoMinimo;
+	private double rangoMaximo;
 	
-	public Unidad(double saludInicial, double ataqueBase, double[] rango) {
+	public Unidad(double saludInicial, double ataqueBase, double rangoMinimo, double rangoMaximo) {
 		this.salud = saludInicial;
 		this.ataqueBase = ataqueBase;
 		this.x = 0;
-		this.rango = rango;
+		this.rangoMinimo = rangoMinimo;
+		this.rangoMaximo = rangoMaximo;
 	}
 	
-	public Unidad(double saludInicial, double ataqueBase, double[] rango, double x) {
+	public Unidad(double saludInicial, double ataqueBase, double rangoMinimo, double rangoMaximo, double x) {
 		this.salud = saludInicial;
 		this.ataqueBase = ataqueBase;
 		this.x = x;
-		this.rango = rango;
+		this.rangoMinimo = rangoMinimo;
+		this.rangoMaximo = rangoMaximo;
 	}
 	
-	public double[] getRango() {
-		return rango;
+	public double getRangoMinimo() {
+		return rangoMinimo;
+	}
+	
+	public double getRangoMaximo() {
+		return rangoMaximo;
 	}
 	
 	public double getUbicacion() {
