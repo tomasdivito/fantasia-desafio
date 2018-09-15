@@ -42,6 +42,29 @@ public class PheachTests {
 		assertEquals(true, p.atacar(p2));
 	}
 	
+	public void serAtacadoActivaEnfurece() {
+		Pheach p = new Pheach();
+		assertEquals(false, p.getEnfurecido());
+		p.recibirAtaque(10);
+		assertEquals(true, p.getEnfurecido());
+	}
+	
+	public void errarNoQuitaLoEnfurecido() {
+		Pheach p = new Pheach();
+		Pheach p2 = new Pheach(2);
+		
+		p.recibirAtaque(10);
+		p.atacar(p2);
+		assertEquals(true, p.getEnfurecido());
+		p.atacar(p2);
+		assertEquals(false, p.getEnfurecido());
+	}
+	
+	public void atacarDeberiaQuitarLoEnfurecido() {
+		Pheach p = new Pheach();
+		Pheach p2 = new Pheach(2);
+	}
+	
 	public void erraUnAtaqueEn4() {
 		Pheach p = new Pheach();
 	}
